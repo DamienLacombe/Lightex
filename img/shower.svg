@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_11_24" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.9551 12H5.99999C6.25261 9.19675 8.60855 7 11.4776 7C14.3466 7 16.7025 9.19675 16.9551 12Z"/>
+</mask>
+<path d="M5.99999 12L5.00403 11.9102L4.90582 13H5.99999V12ZM16.9551 12V13H18.0493L17.9511 11.9102L16.9551 12ZM5.99999 13H16.9551V11H5.99999V13ZM6.99596 12.0898C7.20254 9.79724 9.13073 8 11.4776 8V6C8.08636 6 5.30267 8.59626 5.00403 11.9102L6.99596 12.0898ZM11.4776 8C13.8244 8 15.7526 9.79724 15.9592 12.0898L17.9511 11.9102C17.6525 8.59626 14.8688 6 11.4776 6V8Z" fill="black" mask="url(#path-1-inside-1_11_24)"/>
+<rect x="6.25" y="14.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<rect x="11.25" y="14.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<rect x="16.25" y="14.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<rect x="8.25" y="17.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<rect x="11.25" y="20.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<rect x="14.25" y="17.25" width="0.5" height="1.5" stroke="black" stroke-width="0.5"/>
+<path d="M10.5 7.5V4H13V7.5" stroke="black"/>
+</svg>
