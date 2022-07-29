@@ -15,14 +15,15 @@ window.onload = () => {
     stunt()
     
     background.style.top = `${typeActive.offsetTop}px`
+
     window.innerWidth <= 350 && (
         background.style.top = `${typeActive.offsetTop + 15}px`
     )
 }
 
 window.addEventListener("resize", () => {
+    
     typeActive = document.querySelector(".type-active");
-    console.log(typeActive.offsetTop);
     background.style.top = `${typeActive.offsetTop}px`
 
     window.innerWidth <= 350 && (
@@ -33,6 +34,7 @@ window.addEventListener("resize", () => {
 for (const lamp of lamps) {
     
     lamp.addEventListener("click", (e) => {
+        
         const path = e.composedPath();
            
         for (const lamp of lamps) {
@@ -56,14 +58,13 @@ for (const lamp of lamps) {
             hideBtn.classList.remove("visible"),
             hideBtn.classList.add('hide')
         )
+
+        input.value = 0;    
         lamp.classList.add("active");
-        
         path[0].classList.add("down");
         lamp.classList.add("white-shadow");
         path[2].lastElementChild.classList.add("grow");
-        // console.log(e.path[2].textContent);
-
-
+  
         setTimeout(() => {
             
             const title = document.getElementsByTagName("h1");
@@ -73,8 +74,7 @@ for (const lamp of lamps) {
             document.querySelector(".price").innerHTML = price + "<span>$</span>"
         }, 800);
         
-        
-        setTimeout(() => {
+         setTimeout(() => {
             path[0].classList.remove("down");
         }, 200 )
         stuntBottom()
@@ -128,13 +128,11 @@ heart.addEventListener("click", (e) => {
         setTimeout(() => {
             heart.classList.remove("scale")
         },200)
-        
     ) 
 })
 
 for (const typeLamp of typeLamps) {
 
-    
     typeLamp.addEventListener("click", e => {
 
         for (const typeLamp of typeLamps) {
@@ -142,6 +140,7 @@ for (const typeLamp of typeLamps) {
             typeLamp.classList.remove("type-active");
             typeLamp.classList.remove("fill");
         }
+
         setTimeout(() => {
             typeLamp.classList.add("fill");
         }, 200);
@@ -153,7 +152,7 @@ for (const typeLamp of typeLamps) {
         }
         
         typeLamp.classList.add("type-active") 
-    } )
+    })
 }
 
 for (const btn of headerLink.children) {
@@ -166,6 +165,7 @@ for (const btn of headerLink.children) {
                 headerLink.children[i].classList.add("link")
             )
         }
+
         btn.classList.remove("link");
         btn.classList.add("header-link-click");  
     })
@@ -175,7 +175,6 @@ function stunt() {
     let element = document.querySelector(".stunt");
     let lampsStunt = document.querySelectorAll(".lamp-stunt");
     
-
     for (const lampStunts of lampsStunt) {
         lampStunts.classList.remove("lamp-stunt") 
     }
@@ -191,25 +190,30 @@ function stunt() {
 } 
 
 function stuntBottom() {
+
     let lamps = document.querySelectorAll(".lamp-light")
     
     for (const lamp of lamps) {
         lamp.classList.add("lamp-stunt") 
     }
+
     setTimeout(() => {
         let interval = setInterval(() => {
             let moveBot = document.querySelectorAll(".move-bot");
             let removeBot = document.querySelector(".bottom");
+
             moveBot[moveBot.length - 2] === undefined && clearInterval(interval);
             moveBot[moveBot.length - 1].classList.add("stunt");
             moveBot[moveBot.length - 1].classList.remove("move-bot");
             moveBot[moveBot.length - 1].classList.add("bottom");
+
             if (moveBot.length < 2) {
                 moveBot[moveBot.length - 1].classList.add("stunt")
                 setTimeout(() => {
                     moveBot[moveBot.length - 1].classList.remove("bottom")
                 },180)
             }
+
             setTimeout(() => {
                 removeBot?.classList.remove("bottom")
                 
